@@ -27,7 +27,7 @@ RUN sed -i 's/^    use_node_name yes/#    use_node_name yes/g' /etc/munin/munin.
 RUN mkdir -p /var/run/munin
 RUN chown -R munin:munin /var/run/munin
 
-COPY run.sh /usr/local/bin/start-munin
+COPY run.sh /usr/bin/start-munin
 COPY nginx.conf /etc/nginx/sites-available/default
 
 VOLUME /var/lib/munin
