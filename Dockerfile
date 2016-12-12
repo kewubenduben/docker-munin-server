@@ -8,7 +8,7 @@ RUN apt-get update -y && \
     apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # munin 2.0.55
-RUN add-apt-repository -y ppa:pneu/munin && \
+RUN add-apt-repository -y ppa:malcscott/munin && \
 apt-get update -y && \
 apt-get install munin -y && \
 apt-get install -y telnet mtr wget dnsutils && \
